@@ -1,0 +1,35 @@
+﻿@model UserTask
+@{
+    ViewData["Title"] = "AddForm";
+}
+
+<h1>Let's Add a Task</h1>
+
+
+
+<div class="form">
+	<form asp-controller="Task" asp-action="AddTask" class="px-4 py-3" method="post">
+		<div class="form-group">
+			<label>Task Description</label>
+			<textarea id="add" class="md-textarea form-control" rows="3" asp-for="TaskDescription" required>@Model.TaskDescription</textarea>
+		</div>
+		<div class="form-group">
+			<label>Due Date</label>
+			<input id="add" type="date" asp-for="DueDate" />
+		</div>
+
+
+
+
+		<input type="submit" value="Submit Task" />
+	</form>
+</div>
+
+
+
+
+
+	
+	
+	
+
